@@ -33,6 +33,11 @@ public class TestArduino {
     public static void tearDownClass() {
     }
     
+    
+    /**
+     * Se instala lo necesario para que el aplicativo funcione
+     *
+     */
     @Before
     public void setUp() {
         actions=new ArduinoActions();
@@ -43,14 +48,20 @@ public class TestArduino {
     public void tearDown() {
     }
 
-
+    /**
+     * Metodo que testea la conexión con el arduino
+     */
      @Test
      public void testConnection() {
          assertTrue(actions.isConnected());
      }
      
-     /*@Test
+     /**
+     * Metodo que testea la conexión con el arduino
+     */
+     @Test
      public void testTemp() {
-         assert(true,actions.isConnected());
-     }*/
+         int seleccion=3;//valor que envía la petición para saber la temperatura
+         assertNotNull(actions.sendCommand(new StringBuffer(seleccion).toString()));
+     }
 }

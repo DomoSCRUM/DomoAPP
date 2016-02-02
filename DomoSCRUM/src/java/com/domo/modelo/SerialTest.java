@@ -31,7 +31,7 @@ public class SerialTest implements SerialPortEventListener {
     /**
      * The port we're normally going to use.
      */
-    private static final String portName = "COM5";
+    private static final String portName = "COM4";
     /**
      * Buffered input stream from the port
      */

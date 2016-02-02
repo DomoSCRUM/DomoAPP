@@ -31,6 +31,7 @@ public class Pruebas {
         test.initialize();
         while(true){
             test.sendMessage(JOptionPane.showInputDialog("Ingrese Valor"));
+            System.out.println(test.dato);
             Thread.sleep(1000);
         }
     }
